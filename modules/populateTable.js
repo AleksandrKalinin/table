@@ -1,5 +1,5 @@
 function populateTable(data) {
-  for (var i = 0; i < data.length; i++) {
+  for (const i = 0; i < data.length; i++) {
     let root = document.getElementById('root');
     let row = document.createElement('tr');
     let id = document.createElement('td');
