@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class="table-section">
+    <table>
+      <thead>
+        <tr id="head">
+          <th id="Id" val="id">Id</th>
+          <th id="firstname" val="firstname">Name</th>
+          <th id="lastname" val="lastname">Lastname</th>
+        </tr>
+      </thead>
+      <tbody id="root"></tbody>
+    </table>    
+  </section>
+  <script src='modules/users.js'></script>
+  <script src='modules/populateTable.js'></script>
+  <script src='modules/sortUsers.js'></script>
+  <script src='modules/updateUsers.js'></script>
+  <script>
+    populateTable(users);
+
+    let head = document.getElementById('head');
+    head.addEventListener('click', sortUsers);
+
+    let root = document.getElementById('root');
+    root.addEventListener('click', updateUsers);
+  </script>
+</body>
+</html>
